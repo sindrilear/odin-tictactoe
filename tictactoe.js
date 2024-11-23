@@ -5,7 +5,7 @@ const player1 = {
     playerScore: 0,
     resetStatus() { 
         this.playerStatus = [0, 0, 0, 0, 0, 0, 0 ,0];
-    }
+    },
     changeName(name) {
         this.playerName = name;
     }
@@ -18,7 +18,7 @@ const player2 = {
     playerScore: 0,
     resetStatus() { 
         this.playerStatus = [0, 0, 0, 0, 0, 0, 0 ,0];
-    }
+    },
     changeName(name) {
         this.playerName = name;
     }
