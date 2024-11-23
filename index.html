@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <div class="mainwrapper">
+        <header>TIC TAC TOE</header>
+        <div class="gamegrid">
+            <div class="grid-item bottom right" id="1"></div>
+            <div class="grid-item bottom right" id="2"></div>
+            <div class="grid-item bottom" id="3"></div>
+            <div class="grid-item bottom right" id="4"></div>
+            <div class="grid-item bottom right" id="5"></div>
+            <div class="grid-item bottom" id="6"></div>
+            <div class="grid-item right" id="7"></div>
+            <div class="grid-item right" id="8"></div>
+            <div class="grid-item" id="9"></div>
+        </div>
+        <p id="announce"></p>
+        <div class="playerwrapper">
+            <p>Player X:</p><p id="scoreX">0</p>
+            <p>Player Y:</p><p id="scoreY">0</p>
+            <p>Ties:</p><p id="scoreTie">0</p>
+        </div>
+    </div>
     <script src="tictactoe.js"></script>
 </body>
 </html>

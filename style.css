@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Knewave", system-ui;
+}
+
+header {
+    font-size: 36px;
+}
+
+.mainwrapper {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+    height: 100vh;
+    gap: 20px;
+}
+
+.gamegrid {
+    display:grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    justify-content:center;
+    align-items:center;
+    gap: 0px;
+    overflow: hidden;
+}
+
+.playerwrapper {
+    display:flex;
+    gap: 15px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 46px;
+    font-weight: bold;
+    height: 100%;
+}
+
+.grid-item.bottom {
+    border-bottom: 5px solid black;
+}
+
+.grid-item.bottom.right {
+    border-right: 5px solid black;
+}
+
+.grid-item.right {
+    border-right: 5px solid black;
+}
+
+p {
+    font-size: 24px;
+}
