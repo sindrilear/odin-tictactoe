@@ -48,6 +48,19 @@ function resetGame() {
         grid = document.getElementById(i)
         grid.innerHTML = "";
     }
+    announcePlayer("x");
+}
+
+function changeName(playerSymbol, name) {
+    const playerX = document.getElementById("playerX")
+    const playerO = document.getElementById("playerO")
+    if (playerSymbol === "x") {
+        player1.changeName(name);
+        playerX.innerHTML = `${name}:`
+    } else {
+        playerO.innerHTML = `${name}:`
+        player2.changeName(name);
+    }
 }
 
 function announcePlayer(playertoannounce) {
@@ -59,7 +72,33 @@ function announcePlayer(playertoannounce) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.form-container');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let playerXName = document.getElementById("x").value;
+        let playerOName = document.getElementById("o").value;
+
+        if (playerXName.length != 0) {
+            changeName("x", playerXName);
+        }
+        if (playerOName.length != 0) {
+            changeName("o", playerOName);
+        }
+    })
+})
+
 announcePlayer("x");
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
 
 const gamegrid = document.querySelector(".gamegrid")
 

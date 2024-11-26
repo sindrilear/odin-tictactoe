@@ -25,9 +25,26 @@
         </div>
         <p id="announce"></p>
         <div class="playerwrapper">
-            <p>Player X:</p><p id="scoreX">0</p>
-            <p>Player Y:</p><p id="scoreY">0</p>
+            <p id="playerX">Player X:</p><p id="scoreX">0</p>
+            <p id="playerO">Player O:</p><p id="scoreY">0</p>
             <p>Ties:</p><p id="scoreTie">0</p>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button" onclick="resetGame()">Reset game</button>
+            <button type="button" class="button" onclick="openForm()">Change player name</button>
+        </div>
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <h1>Change player name</h1>
+                <label for="playerxName">Player x:</label>
+                <input type="text" placeholder="Player x name" name="playerX" id="x">
+                <label for="playeroName">Player o:</label>
+                <input type="text" placeholder="Player o name" name="playerO" id="o">
+                <div class="buttons">
+                    <button type="submit" class="button" onclick="closeForm()">Submit</button>
+                    <button type="submit" class="button" onclick="closeForm()">Cancel</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="tictactoe.js"></script>
